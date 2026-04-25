@@ -1,17 +1,31 @@
-'use client'
+"use client";
 
-import MetricCard from '@/components/shared/MetricCard'
-import FraudFilters from '@/components/fraud/FraudFilters'
-import { FraudTrendChart, FraudTypeChart, FraudSourcePie, FraudHotspotMap } from '@/components/fraud/FraudCharts'
-import FraudIncidentsTable from '@/components/fraud/FraudIncidentsTable'
+import MetricCard from "@/components/shared/MetricCard";
+import FraudFilters from "@/components/fraud/FraudFilters";
+import {
+  FraudTrendChart,
+  FraudTypeChart,
+  FraudSourcePie,
+  FraudHotspotMap,
+} from "@/components/fraud/FraudCharts";
+import FraudIncidentsTable from "@/components/fraud/FraudIncidentsTable";
 
 export default function AdFraudPage() {
   return (
-    <div className="mx-auto max-w-[1400px] px-6 py-6" suppressHydrationWarning>
-      <h1 className="text-xl font-bold tracking-tight" style={{ color: 'var(--text)' }}>
+    <div
+      className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6"
+      suppressHydrationWarning
+    >
+      <h1
+        className="text-lg font-bold tracking-tight sm:text-xl"
+        style={{ color: "var(--text)" }}
+      >
         Ad Fraud Detection Dashboard
       </h1>
-      <p className="mb-5 mt-1 text-[13px]" style={{ color: 'var(--text-muted)' }}>
+      <p
+        className="mb-5 mt-1 text-[13px]"
+        style={{ color: "var(--text-muted)" }}
+      >
         Oct 1 – Oct 25, 2024 · Real-time monitoring
       </p>
 
@@ -21,7 +35,7 @@ export default function AdFraudPage() {
         </div>
 
         <div className="flex min-w-0 flex-1 flex-col gap-4">
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             <MetricCard
               label="Overall Fraud Rate"
               value="8.4%"
@@ -29,11 +43,7 @@ export default function AdFraudPage() {
               sub="▼ -0.5%"
               subColor="var(--green)"
             />
-            <MetricCard
-              label="Total Traffic"
-              value="1,245,678"
-              sub="clicks"
-            />
+            <MetricCard label="Total Traffic" value="1,245,678" sub="clicks" />
             <MetricCard
               label="Valid Traffic"
               value="1,141,010"
@@ -69,5 +79,5 @@ export default function AdFraudPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
