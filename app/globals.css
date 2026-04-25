@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card2: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #3b82f6;
+  --accent-light: #dbeafe;
+  --red: #ef4444;
+  --red-light: #fee2e2;
+  --green: #10b981;
+  --green-light: #d1fae5;
+  --orange: #f59e0b;
+  --orange-light: rgba(245, 158, 11, 0.15);
+}
+
+.dark {
+  --bg: #0d1117;
+  --bg-card: #161d2f;
+  --bg-card2: #1a2238;
+  --border: #1e2a45;
+  --text: #e2e8f0;
+  --text-muted: #8b9bb4;
+  --accent: #4f8ef7;
+  --accent-light: rgba(79, 142, 247, 0.15);
+  --red: #ff4c4c;
+  --red-light: rgba(255, 76, 76, 0.15);
+  --green: #00c48c;
+  --green-light: rgba(0, 196, 140, 0.15);
+  --orange: #ff9f43;
+  --orange-light: rgba(255, 159, 67, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
